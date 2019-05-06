@@ -21,8 +21,13 @@ const SearchPanel = () => {
 }
 
 const App = () => {
+	const isLoggedIn = true;
+	const loginBox = <span>Log in please</span>;
+	const welcomeBox = <span>Welcome back</span>
+	
 	return (
 		<div>
+			{ isLoggedIn ? welcomeBox : loginBox } 
 			<AppHeader />
 			<SearchPanel />
 			<TodoList />
